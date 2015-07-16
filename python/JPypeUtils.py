@@ -18,11 +18,13 @@
 
 """
 
-from jpype import *
+
 
 
 def setupJPype():
-    
+
+    from jpype import startJVM    
+
     #Specify the path to the phagea java classes:
     classpath = "-Djava.class.path=/home/sjh/git/phagea/src/"
 
@@ -34,3 +36,5 @@ def setupJPype():
 
 
 def stopJPype():
+    from jpype import shutdownJVM    
+    shutdownJVM()
