@@ -176,10 +176,17 @@ def plotsim(cf,outfn):
     plt.close()
 
     #print some statistics
-    mean_cell_population = pe.getMeanCellPop(1000)
+    mean_cell_population = pe.getMeanCellPop(500)
     print "Mean Cell Population is "
     print mean_cell_population   
     
+
+    mean_phage_population = pe.getMeanPhagePop(500)
+    print "Mean Phage Population is "
+    print mean_phage_population
+    print ""   
+
+
     return
 
 
